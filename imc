@@ -53,6 +53,28 @@ function  IMC(weight, height) {
   return  ((weight / (height/100)  **  2)).toFixed(2)
 }
 
+//  Função construtora para pacientes
+function  Patient(name, age,  weight, height) {
+  this.name = name;
+  this.age  = age;
+  this.weight = weight;
+  this.height = height;
+}
+
+// Como criar novos pacientes usando a função construtora
+const newPatient1 = new Patient('Linus Torvalds', 30, 80, 177);
+const newPatient2 = new Patient('John', 30, 80, 177);
+const newPatient3 = new Patient('Lucy', 30, 80, 177);
+const newPatient4 = new Patient('Soares', 30, 80, 177);
+const newPatient5 = new Patient('Elvis', 30, 80, 177);
+
+// Adicionar os novos pacientes ao array 'patients'
+patients.push(newPatient1)
+patients.push(newPatient2)
+patients.push(newPatient3)
+patients.push(newPatient4)
+patients.push(newPatient5)
+
 
 let patientsName = []
 
@@ -63,4 +85,5 @@ for (let patient of patients) {
 
       console.log(`O senhor ${patient.name}, possui IMC de ${IMC(patient.weight,  patient.height)}`)
 }
+
 
