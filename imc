@@ -1,0 +1,66 @@
+/* 
+  Crie uma lista de pacientes
+
+  Cada paciente dentro da lista, deverá conter
+    nome
+    idade
+    peso
+    altura
+
+  Escreva uma lista contendo o nome dos pacientes
+*/
+
+let patients = [
+  {
+    name: 'Helton',
+    age:  30,
+    weight: 83,
+    height: 177,
+  },
+  {
+    name: 'Bill',
+    age:  64,
+    weight: 88,
+    height: 200
+  },
+  {
+    name: 'Bezos',
+    age:  57,
+    weight: 80,
+    height: 177,
+  },
+  {
+    name: 'Mark',
+    age:  32,
+    weight: 85,
+    height: 179,
+  },
+  {
+    name: 'Larry',
+    age:  40,
+    weight: 77,
+    height: 170,
+  },
+  {
+    name: 'MacFee',
+    age:  72,
+    weight: 88,
+    height: 195,
+  }
+]
+
+function  IMC(weight, height) {
+  return  ((weight / (height/100)  **  2)).toFixed(2)
+}
+
+
+let patientsName = []
+
+for (let patient of patients) {
+
+    let name  = patientsName.push(patient.name)
+    let age = patientsName.push(patient.age)
+
+      console.log(`O senhor ${patient.name}, possui IMC de ${IMC(patient.weight,  patient.height)}`)
+}
+
